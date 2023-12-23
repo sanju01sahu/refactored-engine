@@ -1,28 +1,30 @@
-import React, { useState } from 'react';
-import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
-
+import React, { useState } from "react";
+import SpeechRecognition, {
+  useSpeechRecognition,
+} from "react-speech-recognition";
 
 const Home: React.FC = () => {
   const { transcript, listening, resetTranscript } = useSpeechRecognition();
-  const [userResponse, setUserResponse] = useState('');
+  const [userResponse, setUserResponse] = useState("");
+
+  const handleUserResponse = () => {
+    setUserResponse(transcript);
+    // You can perform additional actions with the user response here
+  };
+  
+  const speak = (text: string) => {
+    // Currently text to speech library is not integrated so only console logging the required output
+    console.log(text);
+  };
 
   const startListening = () => {
     SpeechRecognition.startListening();
   };
 
   const stopListening = () => {
-    // SpeechRecognition.stopListening();
-  };
-
-  const handleUserResponse = () => {
-    // setUserResponse(transcript);
-    // You can perform additional actions with the user response here
-  };
-
-  const speak = (text: string) => {
-    // Use a text-to-speech library of your choice here
-    // For simplicity, we'll use console.log to simulate text-to-speech
-    console.log(text);
+    SpeechRecognition.stopListening();
+    handleUserResponse();
+    resetTranscript();
   };
 
   return (
@@ -34,16 +36,11 @@ const Home: React.FC = () => {
       <button onClick={stopListening} disabled={!listening}>
         Stop Listening
       </button>
-      <button onClick={handleUserResponse}>
-        Capture Response
-      </button>
+
       <div>
         <p>User Response:</p>
         <textarea value={userResponse} readOnly />
       </div>
-      <button onClick={() => speak('Hello! How can I help you?')}>
-        Speak to User
-      </button>
     </div>
   );
 };
