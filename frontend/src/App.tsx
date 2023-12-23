@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 
 
 // import React, { useState } from 'react';
-import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
+// import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 
 
 function App() {
@@ -22,20 +22,7 @@ function App() {
         {/* <Home /> */}
       </div>
       <div>
-      <h1>Interview Simulator</h1>
-      <button  >
-        Start Listening
-      </button>
-      <button  >
-        Stop Listening
-      </button>
-      <div>
-        <p>User Response:</p>
-        <textarea  readOnly />
-      </div>
-      <button onClick={() =>{}}>
-        Speak to User
-      </button>
+      
     </div>
     </>
   );
