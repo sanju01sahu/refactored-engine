@@ -3,16 +3,7 @@ import Navbar from "./components/Navbar";
 // import Home from "./pages/Home";
 
 
-// import React, { useState } from 'react';
-// import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
-
-
 function App() {
-  // const { transcript, listening, resetTranscript, browserSupportsSpeechRecognition } = useSpeechRecognition();
-  
-
-  
-
 
   return (
     <>
