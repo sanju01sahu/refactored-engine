@@ -12,10 +12,10 @@ const Home: React.FC = () => {
     // You can perform additional actions with the user response here
   };
   
-  const speak = (text: string) => {
-    // Currently text to speech library is not integrated so only console logging the required output
-    console.log(text);
-  };
+  // const speak = (text: string) => {
+  //   // Currently text to speech library is not integrated so only console logging the required output
+  //   console.log(text);
+  // };
 
   const startListening = () => {
     SpeechRecognition.startListening();
@@ -29,7 +29,7 @@ const Home: React.FC = () => {
 
   return (
     <div>
-      <h1>Interview Simulator</h1>
+      
       <button onClick={startListening} disabled={listening}>
         Start Listening
       </button>

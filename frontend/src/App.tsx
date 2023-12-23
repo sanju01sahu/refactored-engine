@@ -1,4 +1,5 @@
 import "./App.css";
+import AllRoutes from "./components/AllRoutes";
 import Navbar from "./components/Navbar";
 // import Home from "./pages/Home";
 
@@ -9,8 +10,8 @@ function App() {
     <>
       <div className="app">
         <Navbar />
-        <h1 className="text-3xl font-bold underline">Hello world!</h1>
-        {/* <Home /> */}
+        <AllRoutes />
+        
       </div>
       <div>
       
