@@ -1,15 +1,23 @@
+import "./App.css";
+import AllRoutes from "./components/AllRoutes";
+import Navbar from "./components/Navbar";
+// import Home from "./pages/Home";
 
-import './App.css'
 
 function App() {
 
   return (
     <>
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+      <div className="app">
+        <Navbar />
+        <AllRoutes />
+        
+      </div>
+      <div>
+      
+    </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
